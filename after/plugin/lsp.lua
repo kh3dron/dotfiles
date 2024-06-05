@@ -10,6 +10,7 @@ require('mason-lspconfig').setup({
   -- with the ones you want to install
   ensure_installed = {
 	  'tsserver', 
+	  'clangd',
 	  'rust_analyzer',
 	  'awk_ls',
 	  'bashls',
