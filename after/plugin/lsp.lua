@@ -21,7 +21,7 @@ require('mason-lspconfig').setup({
 	  'marksman',
 	  'pylsp',
 	  'tflint',
-	  'yamlls'},
+	  'yamlls'}, --noqa: E501
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
