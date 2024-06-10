@@ -46,4 +46,14 @@ return require('packer').startup(function(use)
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	}
+
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional
+		},
+	}
+
+	use('nvim-tree/nvim-web-devicons')
+	require 'nvim-web-devicons'.get_icons()
 end)
