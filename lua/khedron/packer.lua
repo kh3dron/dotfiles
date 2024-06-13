@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
 	})
 
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-	use('ThePrimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 	use {
@@ -47,12 +46,10 @@ return require('packer').startup(function(use)
 		"neovim/nvim-lspconfig",
 	}
 
-    use {
-     'nvim-tree/nvim-tree.lua',
-     requires = {
-     'nvim-tree/nvim-web-devicons', -- optional
-  }
-}
-
-
+	use {
+		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons', -- optional
+		}
+	}
 end)
