@@ -13,14 +13,16 @@ return require('packer').startup(function(use)
 		requires = { { 'nvim-lua/plenary.nvim' } }
 
 	}
-
-	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
-	})
+	use{
+		"tiagovla/tokyodark.nvim",
+		opts = {
+			-- custom options here
+		},
+		config = function(_, opts)
+			require("tokyodark").setup(opts) -- calling setup is optional
+			vim.cmd [[colorscheme tokyodark]]
+		end,
+	}
 
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 	use('mbbill/undotree')
@@ -41,7 +43,6 @@ return require('packer').startup(function(use)
 	}
 	use { 'williamboman/mason.nvim' }
 	use {
-		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
 	}

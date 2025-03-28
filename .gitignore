@@ -1,0 +1,4 @@
+plugins/packer_compiled.lua
+
+# secret work commands
+zsh/work.sh
