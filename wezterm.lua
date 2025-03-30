@@ -7,23 +7,20 @@ config.font_size = 22
 config.adjust_window_size_when_changing_font_size = false
 config.bold_brightens_ansi_colors = true
 
-
 config.default_cwd = "/Users/tsald3/Documents/Github"
 
 config.colors = {
     foreground = 'white'
 }
 
-
-
 config.keys = {
-{
-    key = 'd',
-    mods = 'CMD',
-    action = act.SplitHorizontal {
-        domain = 'CurrentPaneDomain'
-    }
-}, {
+    {
+        key = 'd',
+        mods = 'CMD',
+        action = act.SplitHorizontal {
+            domain = 'CurrentPaneDomain'
+        }
+    }, {
     key = 'd',
     mods = 'CMD|SHIFT',
     action = act.SplitVertical {
@@ -59,6 +56,6 @@ config.keys = {
     key = '-',
     mods = 'CMD',
     action = act.DecreaseFontSize
-}}
+} }
 
 return config
