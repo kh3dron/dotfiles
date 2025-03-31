@@ -14,5 +14,7 @@ alias kgn='kubectl get nodes --sort-by={.metadata.creationTimestamp}'
 alias kgp='kubectl get pods'
 alias kcc='kubectl config current-context'
 
+alias ls='eza -la --icons=always'
+
 eval "$(oh-my-posh init zsh --config ~/.config/starship.omp.json)"
 eval "$(mcfly init zsh)"

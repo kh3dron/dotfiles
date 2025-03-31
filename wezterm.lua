@@ -7,7 +7,17 @@ config.font_size = 22
 config.adjust_window_size_when_changing_font_size = false
 config.bold_brightens_ansi_colors = true
 
-config.default_cwd = "/Users/tsald3/Documents/Github"
+config.default_cwd = "$HOME/Documents/Github"
+
+config.window_decorations = "RESIZE"
+config.window_close_confirmation = "NeverPrompt"
+config.window_padding = {
+    left = 0,
+    right = 0,
+    top = 0,
+    bottom = 0,
+}
+
 
 config.colors = {
     foreground = 'white'
@@ -56,6 +66,11 @@ config.keys = {
     key = '-',
     mods = 'CMD',
     action = act.DecreaseFontSize
-} }
+}, {
+    key = ' ',
+    mods = 'SHIFT|CTRL',
+    action = wezterm.action.QuickSelect
+}
+}
 
 return config
