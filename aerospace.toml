@@ -61,7 +61,7 @@ automatically-unhide-macos-hidden-apps = false
     inner.vertical =   30
     outer.left =       30
     outer.bottom =     30
-    outer.top =        30
+    outer.top =        10
     outer.right =      30
 
 # 'main' binding mode declaration
@@ -208,3 +208,8 @@ automatically-unhide-macos-hidden-apps = false
     down = 'volume down'
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'finder'
+run = 'layout floating'
+
