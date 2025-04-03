@@ -28,27 +28,33 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
-    spec = {{
-        "tiagovla/tokyodark.nvim",
-        opts = {},
-        config = function(_, opts)
-            require("tokyodark").setup(opts)
-            vim.cmd [[colorscheme tokyodark]]
-        end
-    }, {"williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig"}, {
+
+    spec = {{"williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig"}, {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',
         dependencies = {'nvim-lua/plenary.nvim'}
     }, {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
+    },{
+	    "github/copilot.vim"
+    },
+    {
+        'projekt0n/github-nvim-theme',
+        name = 'github-theme',
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+            require('github-theme').setup({
+                -- ...
+            })
+
+            vim.cmd('colorscheme github_dark')
+        end
     }, {
         "nvim-tree/nvim-tree.lua",
         dependencies = {"nvim-tree/nvim-web-devicons"}
     }},
-    install = {
-        colorscheme = {"tokyodark"}
-    },
     checker = {
         enabled = true
     }
@@ -57,7 +63,7 @@ require("lazy").setup({
 require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {"pyright", "clangd", "awk_ls", "bashls", "dockerls", "eslint", "gopls", "jsonls", "marksman",
-                        "pylsp", "tflint", "yamlls"}
+                        "pylsp", "tflint", "yamlls", "tflint", "lua_ls"}
 })
 
 -- Configure LSP servers
@@ -73,9 +79,6 @@ require("nvim-tree").setup({
     renderer = {
         group_empty = true
     },
-    filters = {
-        dotfiles = true
-    }
 }, {
     update_focused_file = {
         enable = true
@@ -118,11 +121,6 @@ require'nvim-web-devicons'.setup {
     }
 }
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set('n', '<leader>ps', function()
-    builtin.grep_string({
-        search = vim.fn.input("Grep > ")
-    });
-end)
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.cmd [[colorscheme github_dark_default]]

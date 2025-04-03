@@ -15,22 +15,81 @@ config.window_padding = {
     left = 0,
     right = 0,
     top = 0,
-    bottom = 0,
+    bottom = 0
 }
-
+config.window_background_opacity = .8
+config.macos_window_background_blur = 20
+config.enable_tab_bar = false
 
 config.colors = {
     foreground = 'white'
 }
 
-config.keys = {
-    {
-        key = 'd',
-        mods = 'CMD',
-        action = act.SplitHorizontal {
-            domain = 'CurrentPaneDomain'
-        }
-    }, {
+config.inactive_pane_hsb = {
+    saturation = .8,
+    brightness = .8
+}
+
+-- The filled in variant of the < symbol
+local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+
+-- The filled in variant of the > symbol
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+
+-- config.tab_bar_style = {
+--     active_tab_left = wezterm.format {{
+--         Background = {
+--             Color = '#0b0022'
+--         }
+--     }, {
+--         Foreground = {
+--             Color = '#2b2042'
+--         }
+--     }, {
+--         Text = SOLID_LEFT_ARROW
+--     }},
+--     active_tab_right = wezterm.format {{
+--         Background = {
+--             Color = '#0b0022'
+--         }
+--     }, {
+--         Foreground = {
+--             Color = '#2b2042'
+--         }
+--     }, {
+--         Text = SOLID_RIGHT_ARROW
+--     }},
+--     inactive_tab_left = wezterm.format {{
+--         Background = {
+--             Color = '#0b0022'
+--         }
+--     }, {
+--         Foreground = {
+--             Color = '#1b1032'
+--         }
+--     }, {
+--         Text = SOLID_LEFT_ARROW
+--     }},
+--     inactive_tab_right = wezterm.format {{
+--         Background = {
+--             Color = '#0b0022'
+--         }
+--     }, {
+--         Foreground = {
+--             Color = '#1b1032'
+--         }
+--     }, {
+--         Text = SOLID_RIGHT_ARROW
+--     }}
+-- }
+
+config.keys = {{
+    key = 'd',
+    mods = 'CMD',
+    action = act.SplitHorizontal {
+        domain = 'CurrentPaneDomain'
+    }
+}, {
     key = 'd',
     mods = 'CMD|SHIFT',
     action = act.SplitVertical {
@@ -70,7 +129,22 @@ config.keys = {
     key = ' ',
     mods = 'SHIFT|CTRL',
     action = wezterm.action.QuickSelect
-}
-}
+},
+  {
+    key = 'LeftArrow',
+    mods = 'OPT',
+    action = act.SendKey {
+      key = 'b',
+      mods = 'ALT',
+    },
+  },
+  {
+    key = 'RightArrow',
+    mods = 'OPT',
+    action = act.SendKey { key = 'f', mods = 'ALT' },
+  },
+
+
+  }
 
 return config
