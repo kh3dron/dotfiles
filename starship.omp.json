@@ -1,63 +1,80 @@
 {
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-    "blocks": [
-      {
-        "alignment": "left",
-        "segments": [
-          {
-            "foreground": "#F00",
-            "template": "{{.UserName }}",
-            "type": "session"
-          },
-          {
-            "foreground": "#F00",
-            "template": "- root \uf0e7",
-            "type": "root"
-          },
-          {
-            "type": "kubectl",
-            "foreground": "#FF0",
-            "template": "  {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
-            "properties": {
-              "context_aliases": {
-                "arn:aws:eks:eu-west-1:1234567890:cluster/posh": "posh"
-              }
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#0FF",
+          "template": "{{.UserName }}",
+          "type": "session"
+        },
+        {
+          "foreground": "#F00",
+          "template": "- root \uf0e7",
+          "type": "root"
+        },
+        {
+          "foreground": "#0FF",
+          "template": " k@",
+          "type": "session"
+        },
+        {
+          "type": "kubectl",
+          "foreground": "#77F",
+          "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
+          "properties": {
+            "context_aliases": {
+              "arn:aws:eks:eu-west-1:1234567890:cluster/posh": "posh"
             }
-          },
-          {
-            "foreground": "#0F0",
-            "properties": {
-              "folder_separator_icon": "/",
-              "style": "full"
-            },
-            "template": "\ue5ff {{ .Path }} ",
-            "type": "path"
-          },
-          {
-            "foreground": "#08F",
-            "properties": {
-              "fetch_stash_count": true,
-              "fetch_upstream_icon": true
-            },
-            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
-            "type": "git"
           }
-        ],
-        "type": "prompt"
-      },
-      {
-        "alignment": "left",
-        "newline": true,
-        "segments": [
-          {
-            "foreground": "#F00",
-            "style": "plain",
-            "template": "\u279c ",
-            "type": "text"
+        },
+        {
+          "foreground": "#0FF",
+          "template": " pwd@",
+          "type": "session"
+        },
+        {
+          "foreground": "#77F",
+          "properties": {
+            "folder_separator_icon": "/",
+            "style": "full"
+          },
+          "template": "{{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#0FF",
+          "template": " git@",
+          "type": "session"
+        },
+        {
+          "foreground": "#77F",
+          "template": "{{ .HEAD }} ",
+          "properties": {
+            "branch_icon": "",
+            "mapped_locations": {
+              "~/Documents/Github": ""
           }
-        ],
-        "type": "prompt"
-      }
-    ],
-    "version": 3
-  }
+          },
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#777",
+          "style": "plain",
+          "template": "> ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 3
+}

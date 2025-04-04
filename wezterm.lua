@@ -6,7 +6,6 @@ local config = wezterm.config_builder()
 config.font_size = 22
 config.adjust_window_size_when_changing_font_size = false
 config.bold_brightens_ansi_colors = true
-
 config.default_cwd = "/Users/tsald3/Documents/Github/"
 
 config.window_decorations = "RESIZE"
@@ -20,6 +19,10 @@ config.window_padding = {
 config.window_background_opacity = .8
 config.macos_window_background_blur = 20
 config.enable_tab_bar = false
+
+config.default_cursor_style = 'BlinkingUnderline'
+
+
 
 config.colors = {
     foreground = 'white'
