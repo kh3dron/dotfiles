@@ -6,6 +6,8 @@ alias cat="bat --plain"
 alias treesize='du -shx ./* | sort -h'
 alias tf="terraform"
 alias go-build-linux='env GOOS=linux GOARCH=amd64 go build'
+alias nv="nvim ."
+
 
 alias k="kubecolor"
 alias kubectl="kubecolor"

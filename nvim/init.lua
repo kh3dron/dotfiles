@@ -54,16 +54,18 @@ require("lazy").setup({
     }, {
         "nvim-tree/nvim-tree.lua",
         dependencies = {"nvim-tree/nvim-web-devicons"}
-    }},
+    },
+
+    },
     checker = {
-        enabled = true
+        enabled = true, notify = false
     }
 })
 
 require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = {"pyright", "clangd", "awk_ls", "bashls", "dockerls", "eslint", "gopls", "jsonls", "marksman",
-                        "pylsp", "tflint", "yamlls", "tflint", "lua_ls"}
+                        "pylsp", "tflint", "yamlls", "tflint", "lua_ls", "taplo"}
 })
 
 -- Configure LSP servers
@@ -74,8 +76,8 @@ require("nvim-tree").setup({
         sorter = "case_sensitive"
     },
     view = {
-        width = 30
-    },
+        width = 50
+},
     renderer = {
         group_empty = true
     },
