@@ -21,5 +21,10 @@ fi
 cp zshrc ~/.zshrc
 cat work.zshrc >>~/.zshrc
 
+if [ -f ~/Library/Application Support/Code - Insiders/User/settings.json]; then
+	rm ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
+fi
+cp vscode.json ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
+
 source ~/.zshrc >/dev/null 2>&1
 aerospace reload-config

@@ -25,7 +25,8 @@ config.default_cursor_style = 'BlinkingUnderline'
 
 
 config.colors = {
-    foreground = 'white'
+    foreground = 'white',
+    background = 'black',
 }
 
 config.inactive_pane_hsb = {
@@ -46,19 +47,19 @@ config.keys = {{
         domain = 'CurrentPaneDomain'
     }
 }, {
-    key = 'UpArrow',
+    key = 'h',
     mods = 'OPT|CMD',
     action = act.ActivatePaneDirection('Up')
 }, {
-    key = 'DownArrow',
+    key = 'j',
     mods = 'OPT|CMD',
     action = act.ActivatePaneDirection('Down')
 }, {
-    key = 'LeftArrow',
+    key = 'k',
     mods = 'OPT|CMD',
     action = act.ActivatePaneDirection('Left')
 }, {
-    key = 'RightArrow',
+    key = 'l',
     mods = 'OPT|CMD',
     action = act.ActivatePaneDirection('Right')
 }, {
