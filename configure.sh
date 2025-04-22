@@ -26,5 +26,11 @@ if [ -f ~/Library/Application Support/Code - Insiders/User/settings.json]; then
 fi
 cp vscode.json ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
 
+if [ -f ~/Library/Application\ Support/Cursor/User/settings.json]; then
+	rm ~/Library/Application\ Support/Cursor/User/settings.json
+fi
+cp vscode.json ~/Library/Application\ Support/Cursor/User/settings.json
+
+
 source ~/.zshrc >/dev/null 2>&1
 aerospace reload-config
