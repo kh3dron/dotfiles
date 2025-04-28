@@ -18,5 +18,14 @@ alias kcc='kubectl config current-context'
 
 alias ls='eza -la --icons=always'
 
+alias gc='git clone'
+alias gs='git status'
+alias ga='git add'
+alias gb='git branch'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gpl='git pull'
+alias gps='git push'
+
 eval "$(oh-my-posh init zsh --config ~/.config/starship.omp.json)"
 eval "$(mcfly init zsh)"
