@@ -27,5 +27,8 @@ alias gco='git checkout'
 alias gpl='git pull'
 alias gps='git push'
 
+alias lg='lazygit'
+alias y='yazi'
+
 eval "$(oh-my-posh init zsh --config ~/.config/starship.omp.json)"
 eval "$(mcfly init zsh)"
