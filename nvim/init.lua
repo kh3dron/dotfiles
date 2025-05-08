@@ -137,7 +137,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 local neogit = require('neogit')
 vim.keymap.set('n', '<leader>g', neogit.open, {})
 
-vim.api.nvim_set_keymap('n', '<C-h>', ':NvimTreeToggle<CR>', {
+vim.api.nvim_set_keymap('n', '<leader>t', ':NvimTreeToggle<CR>', {
     noremap = true,
     silent = true
 })

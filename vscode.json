@@ -11,7 +11,7 @@
     "github.copilot.chat.testGeneration.instructions": [],
     "github.copilot.advanced": {},
     "githubPullRequests.pullBranch": "never",
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "editor.stickyScroll.enabled": false,
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
@@ -22,5 +22,6 @@
     "editor.scrollbar.vertical": "hidden",
     "editor.scrollbar.verticalScrollbarSize": 0,
     "workbench.colorTheme": "GitHub Dark Default",
-    "workbench.statusBar.visible": false
+    "workbench.statusBar.visible": false,
+    "explorer.sortOrder": "type"
 }

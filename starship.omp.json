@@ -16,13 +16,13 @@
         },
         {
           "foreground": "#0FF",
-          "template": " k@",
+          "template": " [",
           "type": "session"
         },
         {
           "type": "kubectl",
           "foreground": "#0F0",
-          "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
+          "template": "{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
           "properties": {
             "context_aliases": {
               "arn:aws:eks:eu-west-1:1234567890:cluster/posh": "posh"
@@ -31,7 +31,7 @@
         },
         {
           "foreground": "#0FF",
-          "template": " pwd@",
+          "template": "]---[",
           "type": "session"
         },
         {
@@ -40,17 +40,17 @@
             "folder_separator_icon": "/",
             "style": "full"
           },
-          "template": "{{ .Path }} ",
+          "template": "{{.Path}}",
           "type": "path"
         },
         {
           "foreground": "#0FF",
-          "template": " git@",
+          "template": "]---[",
           "type": "session"
         },
         {
           "foreground": "#0F0",
-          "template": "{{ .HEAD }} ",
+          "template": "{{ .HEAD }}",
           "properties": {
             "branch_icon": "",
             "mapped_locations": {
@@ -58,6 +58,11 @@
           }
           },
           "type": "git"
+        },
+        {
+          "foreground": "#0FF",
+          "template": "]",
+          "type": "session"
         }
       ],
       "type": "prompt"

@@ -8,7 +8,6 @@ alias tf="terraform"
 alias go-build-linux='env GOOS=linux GOARCH=amd64 go build'
 alias nv="nvim ."
 
-
 alias k="kubecolor"
 alias kubectl="kubecolor"
 alias kge='kubectl get events --sort-by={.lastTimestamp}'
@@ -16,7 +15,7 @@ alias kgn='kubectl get nodes --sort-by={.metadata.creationTimestamp}'
 alias kgp='kubectl get pods'
 alias kcc='kubectl config current-context'
 
-alias ls='eza -la --icons=always'
+#alias ls='eza -la --icons=always'
 
 alias gc='git clone'
 alias gs='git status'
@@ -32,3 +31,4 @@ alias y='yazi'
 
 eval "$(oh-my-posh init zsh --config ~/.config/starship.omp.json)"
 eval "$(mcfly init zsh)"
+#eval "$(zellij setup --generate-auto-start zsh)"

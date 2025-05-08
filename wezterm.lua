@@ -1,6 +1,5 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
-
 local config = wezterm.config_builder()
 
 config.font_size = 22
@@ -19,10 +18,9 @@ config.window_padding = {
 config.window_background_opacity = .8
 config.macos_window_background_blur = 20
 config.enable_tab_bar = false
-
 config.default_cursor_style = 'BlinkingUnderline'
 
-
+wezterm.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
 
 config.colors = {
     foreground = 'white',
