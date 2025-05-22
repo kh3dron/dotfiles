@@ -24,7 +24,7 @@ wezterm.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
 
 config.colors = {
     foreground = 'white',
-    background = 'black',
+    background = 'black'
 }
 
 config.inactive_pane_hsb = {
@@ -45,7 +45,7 @@ config.keys = {{
         domain = 'CurrentPaneDomain'
     }
 }, {
-    key = 'h',
+    key = 'k',
     mods = 'OPT|CMD',
     action = act.ActivatePaneDirection('Up')
 }, {
@@ -53,7 +53,7 @@ config.keys = {{
     mods = 'OPT|CMD',
     action = act.ActivatePaneDirection('Down')
 }, {
-    key = 'k',
+    key = 'h',
     mods = 'OPT|CMD',
     action = act.ActivatePaneDirection('Left')
 }, {
@@ -78,37 +78,36 @@ config.keys = {{
     key = ' ',
     mods = 'SHIFT|CTRL',
     action = wezterm.action.QuickSelect
-},
-  {
+}, {
     key = 'LeftArrow',
     mods = 'OPT',
     action = act.SendKey {
-      key = 'b',
-      mods = 'ALT',
-    },
-  },
-  {
+        key = 'b',
+        mods = 'ALT'
+    }
+}, {
     key = 'RightArrow',
     mods = 'OPT',
-    action = act.SendKey { key = 'f', mods = 'ALT' },
-  },
-
-  {
+    action = act.SendKey {
+        key = 'f',
+        mods = 'ALT'
+    }
+}, {
     key = 'LeftArrow',
     mods = 'OPT|SHIFT',
-    action = act.AdjustPaneSize { 'Left', 5 },
-  },
-  {
+    action = act.AdjustPaneSize {'Left', 5}
+}, {
     key = 'DownArrow',
     mods = 'OPT|SHIFT',
-    action = act.AdjustPaneSize { 'Down', 5 },
-  },
-  { key = 'UpArrow', mods = 'OPT|SHIFT', action = act.AdjustPaneSize { 'Up', 5 } },
-  {
+    action = act.AdjustPaneSize {'Down', 5}
+}, {
+    key = 'UpArrow',
+    mods = 'OPT|SHIFT',
+    action = act.AdjustPaneSize {'Up', 5}
+}, {
     key = 'RightArrow',
     mods = 'OPT|SHIFT',
-    action = act.AdjustPaneSize { 'Right', 5 },
-  },
-  }
+    action = act.AdjustPaneSize {'Right', 5}
+}}
 
 return config

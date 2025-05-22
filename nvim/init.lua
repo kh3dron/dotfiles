@@ -142,3 +142,11 @@ vim.api.nvim_set_keymap('n', '<leader>t', ':NvimTreeToggle<CR>', {
     silent = true
 })
 vim.cmd [[colorscheme github_dark_default]]
+
+
+vim.api.nvim_set_keymap('n', '<leader><Esc>', 'wqa', {
+    noremap = true,
+    silent = true
+})
+
+
