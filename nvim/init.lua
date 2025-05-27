@@ -11,6 +11,7 @@ local plugins = {
     require('plugins.neotree'),
     require('plugins.neogit'),
     require('plugins.devicons'),
+    require('plugins.foldsign'),
     {"github/copilot.vim"}
 }
 
