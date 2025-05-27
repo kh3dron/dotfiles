@@ -8,7 +8,7 @@ local plugins = {
     require('plugins.telescope'),
     require('plugins.treesitter'),
     require('plugins.github-theme'),
-    require('plugins.nvim-tree'),
+    require('plugins.neotree'),
     require('plugins.neogit'),
     require('plugins.devicons'),
     {"github/copilot.vim"}
@@ -28,6 +28,42 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     end
 end
 vim.opt.rtp:prepend(lazypath)
+
+require 'nvim-web-devicons'.setup {
+    override = {
+	zsh = {
+	    icon = "",
+	    color = "#428850",
+	    cterm_color = "65",
+	    name = "Zsh"
+	}
+    },
+    color_icons = true,
+    default = true,
+    strict = true,
+    override_by_filename = {
+	[".gitignore"] = {
+	    icon = "",
+	    color = "#f1502f",
+	    name = "Gitignore"
+	}
+    },
+    override_by_extension = {
+	["log"] = {
+	    icon = "",
+	    color = "#81e043",
+	    name = "Log"
+	}
+    },
+    override_by_operating_system = {
+	["apple"] = {
+	    icon = "",
+	    color = "#A2AAAD",
+	    cterm_color = "248",
+	    name = "Apple"
+	}
+    }
+}
 
 require("lazy").setup(plugins, {
     checker = {
