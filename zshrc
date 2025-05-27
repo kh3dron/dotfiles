@@ -32,4 +32,4 @@ alias t='tmux'
 
 eval "$(oh-my-posh init zsh --config ~/.config/starship.omp.json)"
 eval "$(mcfly init zsh)"
-#eval "$(zellij setup --generate-auto-start zsh)"
+cd /Users/$USER/Documents/Github

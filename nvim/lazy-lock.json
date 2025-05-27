@@ -1,7 +1,6 @@
 {
   "avante.nvim": { "branch": "main", "commit": "697384f1cbb03899ecf1fab7725d69d398467ec9" },
   "copilot.lua": { "branch": "master", "commit": "a620a5a97b73faba009a8160bab2885316e1451c" },
-  "copilot.vim": { "branch": "release", "commit": "d1e8429bef7f7709586886b0a23a46fbecc685c4" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
   "fzf-lua": { "branch": "main", "commit": "701d9dd9298ef9b991b7302e79b609badff74ed8" },

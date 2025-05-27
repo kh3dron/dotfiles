@@ -12,7 +12,7 @@ local plugins = {
     require('plugins.neogit'),
     require('plugins.devicons'),
     require('plugins.foldsign'),
-    {"github/copilot.vim"}
+    require('plugins.copilot'),
 }
 
 require('plugins.keymaps')

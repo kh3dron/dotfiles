@@ -17,7 +17,11 @@ config.window_padding = {
 }
 config.window_background_opacity = .8
 config.macos_window_background_blur = 20
-config.enable_tab_bar = false
+
+config.enable_tab_bar = true
+config.tab_bar_at_bottom = true
+config.hide_tab_bar_if_only_one_tab = true
+
 config.default_cursor_style = 'BlinkingUnderline'
 
 wezterm.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
