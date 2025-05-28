@@ -9,3 +9,6 @@ vim.api.nvim_set_keymap('n', '<leader><Esc>', 'wqa', {
 
 -- Option + Backspace in insert mode to delete from cursor to start of previous word
 vim.keymap.set('i', '<M-BS>', '<C-w>', {})
+
+-- commenting
+vim.keymap.set('n', '<leader>c', 'gcc', {})
