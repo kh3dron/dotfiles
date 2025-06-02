@@ -1,4 +1,1 @@
-plugins/packer_compiled.lua
-
-# secret work commands
-work.zshrc
+.zshrc
