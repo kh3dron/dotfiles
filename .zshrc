@@ -29,6 +29,8 @@ alias gps='git push'
 alias lg='lazygit'
 alias y='yazi'
 alias t='tmux'
+alias p='python3'
+alias pp='pip3'
 
 eval "$(oh-my-posh init zsh --config ~/.config/starship.omp.json)"
 eval "$(mcfly init zsh)"
