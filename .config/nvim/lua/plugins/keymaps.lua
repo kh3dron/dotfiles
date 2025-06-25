@@ -12,3 +12,6 @@ vim.keymap.set('i', '<M-BS>', '<C-w>', {})
 
 -- commenting
 vim.keymap.set('n', '<leader>c', 'gcc', {})
+
+vim.keymap.set('n', '<C-b>', '<Cmd>Neotree toggle<CR>')
+
