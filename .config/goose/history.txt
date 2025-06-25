@@ -1,0 +1,16 @@
+#V2
+hello coose
+what mcps do you have 
+is my host at 192.168.0.17 running
+how's my homelab looking
+how's huey
+sorry, I mean 192.168.0.17
+how are my k8s nodes
+how many pods are up 
+list all tools in the tg-mcp
+can you ping all hosts
+are any of the pis too hot
+what's the top process on huey right now
+give me the PIDs
+what's my argo stats
+how's argo looking

@@ -7,4 +7,15 @@ extensions:
     name: developer
     timeout: 300
     type: builtin
+  tg-mcp:
+    args: []
+    bundled: null
+    cmd: tg-mcp
+    description: null
+    enabled: true
+    env_keys: []
+    envs: {}
+    name: tg-mcp
+    timeout: 300
+    type: stdio
 GOOSE_MODEL: gpt-4o

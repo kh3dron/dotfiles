@@ -1,0 +1,103 @@
+{
+    "explorer.confirmDragAndDrop": false,
+    "github.copilot.enable": {
+        "plaintext": true
+    },
+    "makefile.configureOnOpen": true,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.fontFamily": "Hack Nerd Font",
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.confirmSync": false,
+    "github.copilot.chat.testGeneration.instructions": [],
+    "github.copilot.advanced": {},
+    "githubPullRequests.pullBranch": "never",
+    "breadcrumbs.enabled": true,
+    "editor.stickyScroll.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "editor.minimap.enabled": false,
+    "workbench.activityBar.location": "bottom",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.horizontalScrollbarSize": 0,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.statusBar.visible": false,
+    "explorer.sortOrder": "type",
+    "chat.mcp.discovery.enabled": true,
+    "chat.mcp.enabled": true,
+    "chat.extensionTools.enabled": true,
+    "mcp": {
+        "servers": {
+            "sequential-thinking": {
+                "type": "stdio",
+                "command": "npx",
+                "args": [
+                    "-y",
+                    "@modelcontextprotocol/server-sequential-thinking"
+                ]
+            },
+            "fetch": {
+                "type": "stdio",
+                "command": "uvx",
+                "args": [
+                    "mcp-server-fetch"
+                ]
+            },
+            "memory": {
+                "type": "stdio",
+                "command": "npx",
+                "args": [
+                    "-y",
+                    "@modelcontextprotocol/server-memory"
+                ],
+                "env": {
+                    "MEMORY_FILE_PATH": "~/.local/share/mcphub/server-memory/memory.json"
+                }
+            },
+            "context7": {
+                "type": "stdio",
+                "command": "npx",
+                "args": [
+                    "-y",
+                    "@upstash/context7-mcp@latest"
+                ]
+            },
+            "kubernetes": {
+                "type": "stdio",
+                "command": "npx",
+                "args": [
+                    "@strowk/mcp-k8s"
+                ]
+            },
+            "docker-mcp": {
+                "type": "stdio",
+                "command": "uvx",
+                "args": [
+                    "docker-mcp"
+                ]
+            }
+        }
+    },
+    "editor.tabSize": 2,
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "denoland.vscode-deno"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "markdownlint.config": {
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}
