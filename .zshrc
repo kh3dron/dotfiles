@@ -32,6 +32,19 @@ alias t='tmux'
 alias p='python3'
 alias pp='pip3'
 
+for i in {1..9}; do
+  bindkey -s "^$i" "tmux select-window -t $i\n"
+done
+
+alias tmmw='tmux move-window -t '
+alias tsource="tmux source-file ~/.tmux.conf"
+
+# Auto-attach to tmux session 0
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t 0 || tmux new-session -s 0
+fi
+
+
 eval "$(oh-my-posh init zsh --config ~/.config/starship.omp.json)"
 eval "$(mcfly init zsh)"
 cd /Users/$USER/Documents/Github
